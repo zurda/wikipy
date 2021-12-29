@@ -36,3 +36,10 @@ def test_main_prints_extract(runner, mock_requests_get):
 def test_main_invokes_requests_get(runner, mock_requests_get):
     runner.invoke(console.main)
     assert mock_requests_get.called
+
+
+def test_main_with_title_argument(runner):
+    result = runner.invoke(console.main, ["The Office"])
+    assert result.exit_code == 0
+    assert not result.exception
+    assert "mockumentary sitcom" in result.output

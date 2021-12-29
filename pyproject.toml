@@ -19,6 +19,7 @@ flake8 = "^4.0.1"
 black = "^21.12b0"
 pytest = "^6.2.5"
 pytest-mock = "^3.6.1"
+pytest-cov = "^3.0.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -26,3 +27,6 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 wikipy = "wikipy.console:main"
+
+[tool.coverage.run]
+omit = ["*/tests*"]

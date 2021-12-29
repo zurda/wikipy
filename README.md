@@ -13,3 +13,10 @@ Run a Python session inside the new virtual environment with the command:
 ```
 poetry run wikipy
 ```
+
+To check code format:
+
+```
+poetry run flake8
+poetry run black .
+```
